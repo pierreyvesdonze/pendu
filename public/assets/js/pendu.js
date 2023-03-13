@@ -7,7 +7,7 @@ const finalMessage = document.querySelector('#final-message');
 const figurePart = document.querySelectorAll('.figure-part');
 
 // Help to start object words as an array
-const words = ['poisson', 'pain', 'signature', 'ordinateur', 'concentration', 'armature', 'chat', 'casser', 'jouer', 'pendu', 'abracadabra'];
+const words = ['poisson', 'pain', 'signature', 'ordinateur', 'concombre', 'armature', 'chat', 'casser', 'jouer', 'pendu', 'sapin'];
 
 // Fetch collection of words from backend
 function fetchWords() {
