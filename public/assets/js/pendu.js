@@ -1,10 +1,10 @@
-const wordEl = document.querySelector('#word');
+const wordEl       = document.querySelector('#word');
 const wrongLetters = document.querySelector('#wrong-letters');
-const replayBtn = document.querySelector('#play-button');
-const popup = document.querySelector('#popup-container');
+const replayBtn    = document.querySelector('#play-button');
+const popup        = document.querySelector('#popup-container');
 const notification = document.querySelector('#notification-container');
 const finalMessage = document.querySelector('#final-message');
-const figurePart = document.querySelectorAll('.figure-part');
+const figurePart   = document.querySelectorAll('.figure-part');
 
 // Help to start object words as an array
 const words = ['poisson', 'pain', 'signature', 'ordinateur', 'concombre', 'armature', 'chat', 'casser', 'jouer', 'pendu', 'sapin'];

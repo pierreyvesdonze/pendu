@@ -166,6 +166,18 @@ nav,
   margin-top: 50px;
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+  .word {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+  .word {
+    margin-top: 15px;
+  }
+}
+
 .letter {
   border-bottom: 3px solid #1e394a;
   display: -webkit-inline-box;
