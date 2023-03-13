@@ -26,6 +26,10 @@ nav,
   max-width: 32px;
 }
 
+#mobile-demo {
+  background-color: rgba(0, 0, 0, 0.753);
+}
+
 .home-container {
   height: 70vh;
   display: -webkit-box;
