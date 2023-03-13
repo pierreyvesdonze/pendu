@@ -1,0 +1,21 @@
+/*
+ ***************************
+NAV
+ ***************************
+ */
+nav,
+.nav-extended {
+    background-color: var(--navbar-bg) !important;
+}
+
+.nav-wrapper,
+.nav-wrapper .s12 {
+    background-color: var(--navbar-bg) !important;
+}
+
+.brand-logo {
+    margin: 8px;
+}
+.brand-logo img {
+    max-width: 32px;
+}

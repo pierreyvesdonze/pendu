@@ -1,0 +1,103 @@
+@import "./responsive";
+@import "./nav";
+@import "./pendu";
+
+:root {
+   /*  --body-bg: #b98e7e; */
+    --body-bg: linear-gradient(to bottom, #2980b9, #2c3e50);
+    --navbar-bg: #1a1a1a70;
+    --text-color: rgb(255, 255, 255);
+    --primary-color: #ffffffd3;
+    --secondary-color: #1b1504;
+    --hover-color: #284158;
+    --alert-bg: rgba(0, 0, 0, 0.603);
+}
+ 
+/*
+ ***************************
+ GENERAL
+ ***************************
+ */
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--body-bg);
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+input,
+input::placeholder,
+.InputElement,
+textarea,
+.required,
+.input-textarea,
+.span-italic,
+.infos,
+table,
+select,
+select option,
+ul li,
+.alert,
+.custom-btn {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color) !important;
+}
+
+/*
+ ***************************
+SPINNER LOADING ANIMATION
+ ***************************
+ */
+ .animation-loading-container {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.411);
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+}
+
+.lds-dual-ring {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

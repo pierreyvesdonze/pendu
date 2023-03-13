@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Pendu{% endblock %}
+
+{% block body %}
+
+<div class="home-container">
+    <h1>Jouer au PENDU !</h1>
+    <a href="{{ path('app_pendu_easy') }}" class="play-game">Mode facile</a>
+    <a href="{{ path('app_pendu_hard') }}" class="play-game">Mode difficile</a>
+</div>
+
+{% endblock %}

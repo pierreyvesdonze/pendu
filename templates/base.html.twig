@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    {% block metadescription %}{% endblock %}
+
+    <title>{% block title %}Pendu{% endblock %}</title>
+    <link rel="icon" href="{{ asset('assets/images/pendu-favicon.png') }}" />
+    <link href="{{ asset('assets/css/materialize.min.css') }}" type="text/css" rel="stylesheet"
+        media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    {% block stylesheets %}
+
+    {% endblock %}
+</head>
+
+<!--***************************BODY****************************-->
+
+<body>
+    {# Loading animation #}
+    <div class="animation-loading-container">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    {# Flash messages #}
+    <div class="flash-container">
+        {% for label, messages in app.flashes %}
+        {% for message in messages %}
+
+        <div class="alert alert-{{ label }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+
+    {# NAV #}
+    {{ render(controller('App\\Controller\\HomeController::navbar')) }}
+
+    {% block body %}
+    {% endblock %}
+
+    {# FOOTER #}
+    {# {% include "footer/footer.html.twig" %} #}
+
+    {# JS #}
+    {% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/materialize.js') }}"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/pendu.js') }}"></script>
+    {% endblock %}
+</body>
+
+</html>

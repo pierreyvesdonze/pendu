@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pendu difficile{% endblock %}
+
+{% block body %}
+<h1 class="h1-pendu">Pendu</h1>
+<div class="pendu-container">
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+
+            <!--support-->
+            <line x1="60" y1="20" x2="140" y2="20" class="figure-part"/>
+            <line x1="140" y1="20" x2="140" y2="50" class="figure-part"/>
+            <line x1="60" y1="20" x2="60" y2="230" class="figure-part"/>
+            <line x1="60" y1="230" x2="140" y2="230" class="figure-part"/>
+            <line x1="80" y1="20" x2="60" y2="60" class="figure-part"/>
+
+            <!--bonhomme-->
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <line x1="140" y1="100" x2="120" y2="150" class="figure-part" />
+            <line x1="140" y1="100" x2="160" y2="150" class="figure-part" />
+            <line x1="140" y1="150" x2="120" y2="200" class="figure-part" />
+            <line x1="140" y1="150" x2="160" y2="200" class="figure-part" />
+        </svg>
+
+        <!--wrong letters & WORD-->
+        {% include "pendu/_letters.section.html.twig" %}
+    </div>
+
+    <!--Virtual keyboard-->
+    {% include "pendu/_virtual.keyboard.html.twig" %}
+
+    <!--Notifications-->
+    {% include "pendu/_notifications.html.twig" %}
+</div>
+
+
+{% endblock %}
